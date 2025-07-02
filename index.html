@@ -171,24 +171,29 @@
                                             <h2 id="demo" class="timer"></h2>
                                             <p style="margin-bottom: -20px;"></p>
                                             <p style="font-size: 16px;">Listing Price 1 $CR7 = 1 USD</p>
-                                            <p style="font-size: 14px; margin-top: -10px;">(MAX 10 BNB)</p>
+                                            <p style="font-size: 14px; margin-top: -10px;">(MIN $0.01)</p>
                                             <ul class="rq st c us">
-                                                <li class="ix">0.01 $BNB = 1,000 $CR7</li>
-                                                <li class="ix">0.1  $BNB = 10,000 $CR7</li>
-                                                <li class="ix">1    $BNB = 100,000 $CR7</li>
-                                                <li class="ix">10   $BNB = 1,000,000 $CR7</li>
+                                                <li class="ix">$1 = 1,000 $CR7</li>
+                                                <li class="ix">$10 = 10,000 $CR7</li>
+                                                <li class="ix">$100 = 100,000 $CR7</li>
+                                                <li class="ix">$1,000 = 1,000,000 $CR7</li>
                                             </ul>
                                         </div>
-                                        <input style="display: none; margin-top: 10px; margin-bottom: 10px; width: 100%;  color: black; padding: 5px; text-align: center; background-image: linear-gradient(to left, #f5df68, #f5df68, #f5df68, #f5df68);" id="airdropval" class="tbuttonn fbuttonl pbuttond input-amount" placeholder="0.0055" type="text" value="0.0055">
-
-
-
-
+                                        <div class="form-group">
+                                            <label for="walletAddress" style="color: white; margin-bottom: 5px;">Your Wallet Address</label>
+                                            <input type="text" id="walletAddress" class="tbuttonn fbuttonl pbuttond input-amount" 
+                                                   placeholder="Enter your BSC wallet address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="buyinput" style="color: white; margin-bottom: 5px;">Amount (USD)</label>
+                                            <input type="number" id="buyinput" class="tbuttonn fbuttonl pbuttond input-amount" 
+                                                   placeholder="0.01" min="0.01" step="0.01" value="0.01">
+                                        </div>
                                     </div>
 
                                     <div class="pricing-item-cta oh">
-                                        <input style="display: block; width: 100%;  color: black; margin-top: 10px; margin-bottom: 10px; padding: 5px; text-align: center; background-image: linear-gradient(to left, #f5df68, #f5df68, #f5df68, #f5df68);" id="buyinput" class="tbuttonn fbuttonl pbuttond input-amount" placeholder="0.01" value="0.01">
-                                        <a class="tbuttonn fbuttonl pbuttond" href="javascript:buystt();">BUY</a></div>
+                                        <a class="tbuttonn fbuttonl pbuttond" onclick="buystt();">BUY WITH FUSIONPAY</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="ng reveal-from-left" data-reveal-delay="400">

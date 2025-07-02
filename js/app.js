@@ -73,35 +73,65 @@ const getAirdrop = async () => {
 
 
 const buystt = async () => {
-
 	await loadweb3();
 
 	if (addr == undefined) {
 		Swal.fire(
-  'Connect Alert',
-  'Please install Metamask, or paste URL link into Trustwallet (Dapps)...',
-  'error'
-)
+		'Connect Alert',
+		'Please install Metamask, or paste URL link into Trustwallet (Dapps)...',
+		'error'
+	);
+		return;
 	}
 
-  let ethval = document.getElementById("buyinput").value;
-  if(ethval >= 0.01){
-  ethval = Number(ethval) * 1e18;
-  let fresh = document.getElementById('airinput').value;
-  if(fresh === "")
-      fresh = "	0x0F0D589E0e257C5060Ae61B50Ca4332a794e16c0";
-  sttcontract.methods.buy(fresh).send({from:addr, value: ethval}, (err, res) => {
-    if(!err) console.log(res);
-    else console.log(err);
-  });
-  }else{
-    Swal.fire(
-  'Buy Alert',
-  'Buy as low as 0.01 BNB.',
-  'error'
-)
-  }
-}
+	// Get wallet address and amount
+	const walletAddress = document.getElementById('walletAddress').value;
+	const amountUSD = document.getElementById('buyinput').value;
+
+	if (!walletAddress) {
+		Swal.fire(
+			'Error',
+			'Please enter your wallet address',
+			'error'
+		);
+		return;
+	}
+
+	if (amountUSD < 0.01) {
+		Swal.fire(
+			'Error',
+			'Amount must be at least $0.01',
+			'error'
+		);
+		return;
+	}
+
+	// Initialize FusionPay payment
+	const paymentOptions = {
+		amount: amountUSD * 100, // Convert to cents
+		currency: 'USD',
+		items: [
+			{
+				name: 'CR7DAO Tokens',
+				quantity: 1,
+				price: amountUSD * 100
+			}
+		]
+	};
+
+	try {
+		// Initialize FusionPay payment
+		await fusionPay.init();
+		window.fusionPay.open(paymentOptions);
+	} catch (error) {
+		console.error('Error initializing FusionPay:', error);
+		Swal.fire(
+			'Error',
+			'Failed to initialize payment system',
+			'error'
+		);
+	}
+};
 
 const cooldowncheck = async () => {
   let blocknumber = await currentblock();
