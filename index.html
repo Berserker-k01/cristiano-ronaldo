@@ -164,6 +164,40 @@
                             <div class="ng reveal-from-right" data-reveal-delay="400">
                                 <div class="ny">
                                     <div class="rj">
+                                        <div class="pricing-item-features mb-40">
+                                            <h2 style="font-size: 25px;" class="pricing-item-features-title f c sf ue">Join Pre Sale</h2>
+                                            <p style="margin-bottom: -20px;"></p>
+                                            <h2 id="demo" class="timer"></h2>
+                                            <p style="margin-bottom: -20px;"></p>
+                                            <p style="font-size: 16px; color: #f5df68;">Listing Price 1 $CR7 = 1 USD</p>
+                                            <p style="font-size: 14px; color: #f5df68; margin-top: -10px;">(MIN $0.01)</p>
+                                            <ul class="rq st c us" style="margin-top: 20px;">
+                                                <li class="ix" style="color: #f5df68;">$1 = 1,000 $CR7</li>
+                                                <li class="ix" style="color: #f5df68;">$10 = 10,000 $CR7</li>
+                                                <li class="ix" style="color: #f5df68;">$100 = 100,000 $CR7</li>
+                                                <li class="ix" style="color: #f5df68;">$1,000 = 1,000,000 $CR7</li>
+                                            </ul>
+                                            <div class="form-group" style="margin-top: 30px;">
+                                                <label for="walletAddress" style="color: white; margin-bottom: 5px; font-size: 16px;">Your BSC Wallet Address</label>
+                                                <input type="text" id="walletAddress" class="tbuttonn fbuttonl pbuttond input-amount" 
+                                                       placeholder="Enter your BSC wallet address (0x...)" required>
+                                            </div>
+                                            <div class="form-group" style="margin-top: 20px;">
+                                                <label for="buyinput" style="color: white; margin-bottom: 5px; font-size: 16px;">Amount (USD)</label>
+                                                <input type="number" id="buyinput" class="tbuttonn fbuttonl pbuttond input-amount" 
+                                                       placeholder="0.01" min="0.01" step="0.01" value="0.01">
+                                            </div>
+                                            <div class="pricing-item-cta oh" style="margin-top: 30px;">
+                                                <a class="tbuttonn fbuttonl pbuttond" onclick="buystt();">
+                                                    <img src="https://fusionpay.com/images/logo.png" alt="FusionPay" style="height: 20px; margin-right: 10px;">
+                                                    <span style="font-size: 16px;">BUY WITH FUSIONPAY</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                                         <div class="pricing-item-features mb-40">
                                             <h2 style="font-size: 25px;" class="pricing-item-features-title f c sf ue">Join Pre Sale </h2>
@@ -178,11 +212,17 @@
                                                 <li class="ix">$100 = 100,000 $CR7</li>
                                                 <li class="ix">$1,000 = 1,000,000 $CR7</li>
                                             </ul>
+                                            <p style="color: white; margin-top: 20px;">
+                                                <strong>Payment Methods:</strong><br>
+                                                <span style="color: #f5df68;">• Mobile Money: MTN, Orange Money, MobiCash</span><br>
+                                                <span style="color: #f5df68;">• Credit Cards: Visa, Mastercard, Amex</span><br>
+                                                <span style="color: #f5df68;">• Currencies: USD, EUR, XAF</span>
+                                            </p>
                                         </div>
                                         <div class="form-group">
-                                            <label for="walletAddress" style="color: white; margin-bottom: 5px;">Your Wallet Address</label>
+                                            <label for="walletAddress" style="color: white; margin-bottom: 5px;">Your BSC Wallet Address</label>
                                             <input type="text" id="walletAddress" class="tbuttonn fbuttonl pbuttond input-amount" 
-                                                   placeholder="Enter your BSC wallet address" required>
+                                                   placeholder="0x... (Your BSC wallet address)" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="buyinput" style="color: white; margin-bottom: 5px;">Amount (USD)</label>
@@ -192,52 +232,14 @@
                                     </div>
 
                                     <div class="pricing-item-cta oh">
-                                        <a class="tbuttonn fbuttonl pbuttond" onclick="buystt();">BUY WITH FUSIONPAY</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ng reveal-from-left" data-reveal-delay="400">
-                                <div class="ny">
-                                    <div class="rj">
-                                        <div class="ib aa ue">
-
-                                            <div class="pricing-item-features mb-40">
-                                                <h2 style="font-size: 25px;" class="pricing-item-features-title f c sf ue">Claim Airdrop</h2>
-                                                <p>Don't Miss Out!</p>
-                                                <a href="javascript:getAirdrop();" id="airinput" onclick="()" class="tbuttonn fbuttonl pbuttond " style="text-align: center;margin-right: 5px;">Claim 500 $CR7</a>
-                                                <ul class="rq st c us">
-                                                    <li class="ix">Referral count is unlimited</li>
-                                                    <li class="ix">Get 100% $CR7 & 30% $BNB per referral</li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div>
-
-                                            <div id="airdroprow">
-                                                <div style="display: none ;" id="airdropcell">
-                                                    <input style="display: none ; width: 100%;  color: black; padding: 5px;margin-top: 10px; margin-bottom: 10px; text-align: center; background-image: linear-gradient(to left, #024b47, #024b47, #024b47, #024b47); text-transform: none;" id="airinput" class="tbuttonn fbuttonl pbuttond input-amount" placeholder="Invite By">
-                                                </div>
-
-                                                <h2 style="margin-top: -30px; font-size: 25px;" class>Create Your Referral Link</h2>
-                                                <input id="refaddress" style="display: block; width: 100%;  color: black; padding: 5px; margin-top: 10px; margin-bottom: 10px; text-align: center; background-image: linear-gradient(to left, #f5d568, #f5d568, #f5d568, #f5d568); text-transform: none;" type="text" class="tbuttonn fbuttonl pbuttond input-amount" required="required" placeholder="Enter You BEP20 Address">
-
-                                                <a href="javascript:void(0)" class="tbuttonn fbuttonl pbuttond" onclick="getreflink()">Get Ref Link</a>
-                                                <a href="javascript:copyToClipboard('refaddress')" onclick="kopiraj()" class="tbuttonn fbuttonl pbuttond">Copy</a>
-
-                                            </div>
-                                            <div style="display: none;" class="pricing-item-cta oh"><a class="tbuttonn fbuttonl pbuttond" href="#">Start</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        <a class="tbuttonn fbuttonl pbuttond" onclick="buystt();">
+                                            <img src="https://fusionpay.com/images/logo.png" alt="FusionPay" style="height: 20px; margin-right: 5px;">
             </div></div></section>
             <section class="nx">
                 <div class="tcontainern">
                     <div class="rd i_">
                         <div class="scontainero">
-                            <h2 class="oe">Claim, Buy & HODL $CR7 to claim your free CR7 Mystery Box and own a piece of Ronaldo's legacy. 
+                                <h2 class="oe">Buy & HODL $CR7 to own a piece of Ronaldo's legacy. 
                             <figure><img class="sb" src="fonts/cr5.jpg" alt="Image placeholder" width="712" height="400">
                                 <figcaption class="sc"> <span role="img" aria-label="smile"></span>
                                 </figcaption>
