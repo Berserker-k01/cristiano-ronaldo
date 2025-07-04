@@ -3,10 +3,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CR7 DAO - THE LARGEST #CR7 FANS DAO ON Binance Smart Chain</title>
+    <title id="page-title">CR7 DAO - THE LARGEST #CR7 FANS DAO ON Binance Smart Chain</title>
     <meta name="description" content="CR7DAO Ecosystem.">
     <link rel="shortcut icon" type="image/x-icon" href="fonts/crlogo.jpg">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
 </head>
 
 <body class="t">
@@ -33,14 +34,20 @@
             </div>
         </header>
         <main class="nw">
-            <section class="rb nx tillustration-section-n">
+            <section class="rb nx tillustration-section-n hero-section">
                 <div class="tcontainern">
                     <div class="rm rd">
                         <div class="nf np">
                             <div class="split-item">
                                 <div class="nh az reveal-from-right" data-reveal-container=".split-item">
-                                    <h1 class="oe ok reveal-from-bottom" data-reveal-delay="150">World No. 1 CR7 Fans Club DAO just embarked a new phase!</h1>
-                                    <p class="oe us reveal-from-bottom" data-reveal-delay="300">The CR7 and Binance partnership is  based on a new synergy that will help build a bridge to link football to the Metaverse and open more opportunities for football fans to own NFTs of their favorite football players and teams. This is for passionate fans to gain from their passion. The CR7DAO token is here to build a new community filled with excitement and fun, Breaking down boundaries between Football and Web3. This Token is an easier pathway for gaining entry into the Ronaldo-Binance NFT collection as holders will enjoy privileges.
+                                    <h1 class="oe ok reveal-from-bottom" data-reveal-delay="150" id="hero-title">World No. 1 CR7 Fans Club DAO just embarked a new phase!</h1>
+                                    <p class="oe us reveal-from-bottom" data-reveal-delay="300" id="hero-description">The CR7 and Binance partnership is  based on a new synergy that will help build a bridge to link football to the Metaverse and open more opportunities for football fans to own NFTs of their favorite football players and teams. This is for passionate fans to gain from their passion. The CR7DAO token is here to build a new community filled with excitement and fun, Breaking down boundaries between Football and Web3. This Token is an easier pathway for gaining entry into the Ronaldo-Binance NFT collection as holders will enjoy privileges.</p>
+                                    <div class="language-switcher">
+                                        <select id="language-select" onchange="setLanguage(this.value)">
+                                            <option value="en">English</option>
+                                            <option value="fr">Français</option>
+                                        </select>
+                                    </div>
 
 
 
@@ -155,9 +162,9 @@
                 <div class="tcontainern">
                     <div class="pricing-inner rd">
                         <div class="rv s_ reveal-from-bottom">
-                            <div class="scontainero">
-                                <h1 class="sz">CR7DAO Token Sale.</h1>
-                            </div>
+                            <div class="pricing-item-features mb-40 presale-section">
+                            <h1 class="sz" id="presale-section-title">CR7DAO Token Sale.</h1>
+                        </div>
                         </div>
 
                         <div class="tiles-wrap">
@@ -200,7 +207,7 @@
                         </div>
 
                                         <div class="pricing-item-features mb-40">
-                                            <h2 style="font-size: 25px;" class="pricing-item-features-title f c sf ue">Join Pre Sale </h2>
+                                            <h2 style="font-size: 25px;" class="pricing-item-features-title f c sf ue" id="presale-title">Join Pre Sale </h2>
                                             <p style="margin-bottom: -20px;"></p>
                                             <h2 id="demo" class="timer"></h2>
                                             <p style="margin-bottom: -20px;"></p>
@@ -330,11 +337,17 @@
                 });
             });
         </script>
+        <script src="js/translations.js"></script>
+        <script>
+            // Initial language setup
+            const lang = localStorage.getItem('language') || 'en';
+            document.getElementById('language-select').value = lang;
+            setLanguage(lang);
 
-
-
-
-
-</section></body>
-
+            // Save language preference
+            document.getElementById('language-select').addEventListener('change', function() {
+                localStorage.setItem('language', this.value);
+            });
+        </script>
+    </body>
 </html>
